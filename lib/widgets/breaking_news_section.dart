@@ -1,19 +1,17 @@
-// ignore_for_file: prefer_const_constructors
-
+import 'package:carousel_slider/carousel_controller.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-import 'package:carousel_slider/carousel_slider.dart';
-
-class HomePageBody extends StatefulWidget {
-  const HomePageBody({
+class BreakingNewsSection extends StatefulWidget {
+  const BreakingNewsSection({
     super.key,
   });
 
   @override
-  State<HomePageBody> createState() => _HomePageBodyState();
+  State<BreakingNewsSection> createState() => _BreakingNewsSectionState();
 }
 
-class _HomePageBodyState extends State<HomePageBody> {
+class _BreakingNewsSectionState extends State<BreakingNewsSection> {
   //imgs of the carousel
   final List<String> imgList = [
     "https://images.giant-bicycles.com/npxjlknouzmeri0mnboz/preview.jpg",
@@ -28,6 +26,7 @@ class _HomePageBodyState extends State<HomePageBody> {
 
   @override
   Widget build(BuildContext context) {
+    //carousel items
     final List<Widget> imageSliders = imgList
         .map((item) => ClipRRect(
             borderRadius: BorderRadius.all(Radius.circular(20.0)),
@@ -84,6 +83,7 @@ class _HomePageBodyState extends State<HomePageBody> {
                 Positioned(
                   top: 123,
                   left: 15,
+                  width: 200,
                   child: Text(
                     "Alexander wears modified helmet in road races",
                     style: TextStyle(
@@ -91,7 +91,6 @@ class _HomePageBodyState extends State<HomePageBody> {
                         fontWeight: FontWeight.w500,
                         fontSize: 16),
                   ),
-                  width: 200,
                 )
               ],
             )))
@@ -100,22 +99,22 @@ class _HomePageBodyState extends State<HomePageBody> {
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
       child: Container(
-        decoration: BoxDecoration(color: Colors.white),
+        decoration: const BoxDecoration(color: Colors.white),
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Row(
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
-                Text(
+                const Text(
                   "Breaking News",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
-                Spacer(),
+                const Spacer(),
                 InkWell(
                   onTap: () {
                     debugPrint("view all link clicked");
@@ -133,6 +132,7 @@ class _HomePageBodyState extends State<HomePageBody> {
             SizedBox(
               height: 20,
             ),
+
             CarouselSlider(
               items: imageSliders,
               carouselController: _controller,
@@ -145,6 +145,7 @@ class _HomePageBodyState extends State<HomePageBody> {
                     });
                   }),
             ),
+            //carousel postion indecators
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: imgList.asMap().entries.map((entry) {

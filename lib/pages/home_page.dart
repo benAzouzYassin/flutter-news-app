@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 
-import '../widgets/home_page_body.dart';
+import '../widgets/breaking_news_section.dart';
 import '../widgets/navigation_bar.dart';
+import '../widgets/recommendation_section.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -25,10 +26,12 @@ class _HomePageState extends State<HomePage> {
         child: ApplicationBar(scaffoldKey: _scaffoldKey),
       ),
       drawer: Drawer(
-        backgroundColor: Color.fromARGB(255, 224, 9, 9),
+        backgroundColor: Color.fromARGB(255, 198, 198, 198),
         child: Text("this the drawer"),
       ),
-      body: HomePageBody(),
+      body: ListView(
+        children: const [BreakingNewsSection(), RecommendationSection()],
+      ),
       bottomNavigationBar: NavBar(selected: 0),
     );
   }

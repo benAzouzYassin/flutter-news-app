@@ -9,9 +9,34 @@ class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NavigationBar(
-      destinations: const [
-        NavigationDestination(icon: Icon(Icons.home_filled), label: ""),
-        NavigationDestination(icon: Icon(Icons.language), label: "")
+      destinations: [
+        NavigationDestination(
+            icon: Icon(
+              Icons.home_filled,
+              color: Colors.grey,
+            ),
+            label: ""),
+        NavigationDestination(
+            icon: Icon(
+              Icons.language,
+              color: Colors.grey,
+            ),
+            label: ""),
+        NavigationDestination(
+            icon: Container(
+              child: Image.asset(
+                "lib/icons/save.png",
+                width: 20,
+                color: Colors.grey,
+              ),
+            ),
+            label: ""),
+        NavigationDestination(
+            icon: Icon(
+              Icons.person_outline_outlined,
+              color: Colors.grey,
+            ),
+            label: "")
       ],
       selectedIndex: selected,
     );
