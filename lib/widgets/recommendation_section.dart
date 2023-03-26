@@ -23,20 +23,20 @@ class RecommendationSection extends StatelessWidget {
                 onTap: () {
                   debugPrint("view all link clicked");
                 },
-                child: Text(
+                child: const Text(
                   "View all",
                   style: TextStyle(fontSize: 14, color: Colors.blue),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          RecommendationItem(
+          const RecommendationItem(
             genre: "Sports",
             title: "What Training Do volyball Players Need?",
             author: "McKindney",
@@ -46,19 +46,19 @@ class RecommendationSection extends StatelessWidget {
             authorImg:
                 "https://sb.kaleidousercontent.com/67418/574x435/74d8ee5821/screenshot_2022-04-25_at_16-00-23-removebg-preview.png",
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
-          RecommendationItem(
-            genre: "Sports",
-            title: "What Training Do volyball Players Need?",
-            author: "McKindney",
-            postDate: "Feb27,2023",
+          const RecommendationItem(
+            genre: "Education",
+            title: "Secondary school places: when do parents find out?",
+            author: "Rosemary",
+            postDate: "Feb28,2023",
             imgLink:
-                "https://www.pakmen.com/wp-content/uploads/2018/04/13048268_252650438420825_3052789132820002856_o.jpg",
+                "https://www.verywellfamily.com/thmb/Incx-LNzP8oa-Oh4W4XiPlpsCz4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/high-school-teacher-calling-on-student-in-classroom-595349163-5adf35e6fa6bcc0036b16732.jpg",
             authorImg:
                 "https://sb.kaleidousercontent.com/67418/574x435/74d8ee5821/screenshot_2022-04-25_at_16-00-23-removebg-preview.png",
-          )
+          ),
         ],
       ),
     );
@@ -92,42 +92,42 @@ class RecommendationItem extends StatelessWidget {
             image: DecorationImage(
                 image: NetworkImage(imgLink), fit: BoxFit.cover)),
       ),
-      SizedBox(
+      const SizedBox(
         width: 10,
       ),
       SizedBox(
         height: 105,
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             genre,
-            style: TextStyle(fontSize: 10, color: Colors.grey),
+            style: const TextStyle(fontSize: 10, color: Colors.grey),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           SizedBox(
             width: 200,
             child: Text(
               title,
-              style: TextStyle(fontWeight: FontWeight.w500, height: 1.5),
+              style: const TextStyle(fontWeight: FontWeight.w500, height: 1.5),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Row(children: [
             Text(
               author,
-              style: TextStyle(fontSize: 10, color: Colors.grey),
+              style: const TextStyle(fontSize: 10, color: Colors.grey),
             ),
-            Text(
+            const Text(
               " •",
               style: TextStyle(color: Colors.grey, fontSize: 16),
             ),
             Text(
               "  $postDate",
-              style: TextStyle(fontSize: 10, color: Colors.grey),
+              style: const TextStyle(fontSize: 10, color: Colors.grey),
             )
           ])
         ]),

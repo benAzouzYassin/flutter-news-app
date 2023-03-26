@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -33,7 +31,7 @@ class NavBar extends StatelessWidget {
         ],
         color: Colors.grey,
         activeColor: Colors.white,
-        padding: EdgeInsets.all(5),
+        padding: const EdgeInsets.all(5),
         gap: 5,
         tabBackgroundColor: Colors.blue,
         selectedIndex: selected,

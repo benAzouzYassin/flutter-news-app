@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +28,7 @@ class _BreakingNewsSectionState extends State<BreakingNewsSection> {
     //carousel items
     final List<Widget> imageSliders = imgList
         .map((item) => ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+            borderRadius: const BorderRadius.all(Radius.circular(20.0)),
             child: Stack(
               children: <Widget>[
                 Image.network(item, fit: BoxFit.cover, width: 1000.0),
@@ -37,11 +36,11 @@ class _BreakingNewsSectionState extends State<BreakingNewsSection> {
                   top: 15,
                   left: 15,
                   child: Container(
-                    padding: EdgeInsets.fromLTRB(13, 5, 13, 5),
+                    padding: const EdgeInsets.fromLTRB(13, 5, 13, 5),
                     decoration: BoxDecoration(
                         color: Colors.blue[600],
                         borderRadius: BorderRadius.circular(100)),
-                    child: Text(
+                    child: const Text(
                       "Sports",
                       style: TextStyle(
                           fontSize: 10,
@@ -80,7 +79,7 @@ class _BreakingNewsSectionState extends State<BreakingNewsSection> {
                     ],
                   ),
                 ),
-                Positioned(
+                const Positioned(
                   top: 123,
                   left: 15,
                   width: 200,
@@ -119,17 +118,17 @@ class _BreakingNewsSectionState extends State<BreakingNewsSection> {
                   onTap: () {
                     debugPrint("view all link clicked");
                   },
-                  child: Text(
+                  child: const Text(
                     "View all",
                     style: TextStyle(fontSize: 14, color: Colors.blue),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
 
@@ -155,16 +154,17 @@ class _BreakingNewsSectionState extends State<BreakingNewsSection> {
                         ? Container(
                             width: 20,
                             height: 7,
-                            margin: EdgeInsets.fromLTRB(3, 10, 3, 0),
+                            margin: const EdgeInsets.fromLTRB(3, 10, 3, 0),
                             decoration: BoxDecoration(
                                 color: Colors.blue,
                                 borderRadius: BorderRadius.circular(200)))
                         : Container(
                             width: 7,
                             height: 7,
-                            margin: EdgeInsets.fromLTRB(3, 10, 3, 0),
+                            margin: const EdgeInsets.fromLTRB(3, 10, 3, 0),
                             decoration: BoxDecoration(
-                                color: Color.fromRGBO(173, 173, 173, 0.45),
+                                color:
+                                    const Color.fromRGBO(173, 173, 173, 0.45),
                                 borderRadius: BorderRadius.circular(200)),
                           ));
               }).toList(),

@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
 import '../widgets/breaking_news_section.dart';
@@ -15,24 +13,24 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   //used to open the drawer
-  GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(kToolbarHeight),
+        preferredSize: const Size.fromHeight(kToolbarHeight),
         child: ApplicationBar(scaffoldKey: _scaffoldKey),
       ),
-      drawer: Drawer(
+      drawer: const Drawer(
         backgroundColor: Color.fromARGB(255, 198, 198, 198),
         child: Text("this the drawer"),
       ),
       body: ListView(
         children: const [BreakingNewsSection(), RecommendationSection()],
       ),
-      bottomNavigationBar: NavBar(selected: 0),
+      bottomNavigationBar: const NavBar(selected: 0),
     );
   }
 }
@@ -52,25 +50,25 @@ class ApplicationBar extends StatelessWidget {
       backgroundColor: Colors.white,
       leadingWidth: 0,
       actions: [
-        SizedBox(
+        const SizedBox(
           width: 20,
         ),
         CircleAvatar(
           radius: 20,
-          backgroundColor: Color.fromRGBO(215, 215, 212, 0.5),
+          backgroundColor: const Color.fromRGBO(215, 215, 212, 0.5),
           child: IconButton(
-            icon: Icon(Icons.menu, color: Colors.black),
+            icon: const Icon(Icons.menu, color: Colors.black),
             onPressed: () {
               _scaffoldKey.currentState!.openDrawer();
             },
           ),
         ),
-        Spacer(),
+        const Spacer(),
         CircleAvatar(
           radius: 20,
-          backgroundColor: Color.fromRGBO(215, 215, 212, 0.5),
+          backgroundColor: const Color.fromRGBO(215, 215, 212, 0.5),
           child: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               color: Colors.black,
             ),
@@ -82,10 +80,10 @@ class ApplicationBar extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: CircleAvatar(
-            backgroundColor: Color.fromRGBO(215, 215, 212, 0.5),
+            backgroundColor: const Color.fromRGBO(215, 215, 212, 0.5),
             radius: 20,
             child: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.notifications_outlined,
                 color: Colors.black,
               ),
